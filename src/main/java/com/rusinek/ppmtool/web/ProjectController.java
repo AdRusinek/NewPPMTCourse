@@ -33,8 +33,8 @@ public class ProjectController {
         ResponseEntity<?> errorMap = errorService.MapValidationService(result);
         if (errorMap != null) return errorMap;
 
-        projectService.saveOrUpdateProject(project);
-        return new ResponseEntity<Project>(project, HttpStatus.CREATED);
+        Project project1 = projectService.saveOrUpdateProject(project);
+        return new ResponseEntity<Project>(project1, HttpStatus.CREATED);
     }
 
 
