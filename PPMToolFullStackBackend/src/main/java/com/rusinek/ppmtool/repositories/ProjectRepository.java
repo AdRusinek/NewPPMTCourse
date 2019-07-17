@@ -8,6 +8,10 @@ import org.springframework.stereotype.Repository;
  * Created by Adrian Rusinek on 17.07.2019
  **/
 @Repository
-public interface ProjectRepository extends CrudRepository<Project,Long> {
+public interface ProjectRepository extends CrudRepository<Project, Long> {
 
+    Project findByProjectIdentifier(String projectIdentifier);
+
+    @Override
+    Iterable<Project> findAll();
 }
