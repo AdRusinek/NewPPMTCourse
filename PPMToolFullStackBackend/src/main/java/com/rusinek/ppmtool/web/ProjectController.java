@@ -1,6 +1,7 @@
 package com.rusinek.ppmtool.web;
 
 import com.rusinek.ppmtool.domain.Project;
+import com.rusinek.ppmtool.domain.ProjectTask;
 import com.rusinek.ppmtool.services.MapValidationErrorService;
 import com.rusinek.ppmtool.services.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.List;
 
 /**
  * Created by Adrian Rusinek on 17.07.2019
@@ -54,5 +56,6 @@ public class ProjectController {
         return new ResponseEntity<String>("Project with Project Identifier '" + projectIdentifier
                 + "' was deleted", HttpStatus.OK);
     }
+
 
 }
