@@ -12,5 +12,6 @@ public interface BacklogRepository extends CrudRepository<Backlog,Long> {
     Backlog findBacklogByProjectIdentifier(String projectIdentifier);
 
     List<Backlog> findByIdBetween(Integer val1, Integer val2);
+    List<Backlog> findBacklogByProjectIdentifier(Integer val1, Integer val2);
 
 }
